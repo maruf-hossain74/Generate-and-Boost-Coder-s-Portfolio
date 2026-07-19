@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeFolio - Settings</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'app-bg': '#090d14',
+                        'sidebar-bg': '#0c121e',
+                        'panel-bg': '#000000',
+                        'input-bg': '#1a1a1a',
+                        'text-muted': '#8f9bb3',
+                        'accent-cyan': '#13d4f1',
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #090d14; color: #ffffff; }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex">
+
+    <!-- Sidebar -->
+    <div class="w-64 bg-sidebar-bg border-r border-gray-800 p-6 flex flex-col justify-between">
+        <div>
+            <div class="flex items-center gap-2 mb-10 font-bold text-lg tracking-wider">
+                <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-cyan-500 to-blue-600"></div>
+                CODEFOLOI
+            </div>
+            <div class="space-y-6 text-text-muted">
+                <div class="flex items-center gap-3">Dashboard</div>
+                <div class="flex items-center gap-3">My Portfolio</div>
+                <div class="flex items-center gap-3">Leaderboard</div>
+                <div class="flex items-center gap-3">Contests</div>
+                <div class="flex items-center gap-3">Platforms</div>
+                <div class="flex items-center gap-3 text-cyan-400 bg-gray-900 p-2 rounded">Settings</div>
+            </div>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg flex items-center gap-3">
+            <div class="w-10 h-10 bg-gray-600 rounded-full"></div>
+            <div>
+                <p class="text-sm font-bold">Maruf Hossain</p>
+                <p class="text-xs text-cyan-400">8 Platforms Connected</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex-1 p-10">
+        <!-- Tabs -->
+        <div class="flex gap-4 mb-10">
+            <button class="bg-gray-800 px-4 py-2 rounded-lg text-sm text-gray-400">Basic Info</button>
+            <button class="bg-gray-800 px-4 py-2 rounded-lg text-sm text-gray-400">Profile Details</button>
+            <button class="bg-gray-800 px-4 py-2 rounded-lg text-sm text-gray-400">Platforms</button>
+            <button class="bg-blue-600 px-4 py-2 rounded-lg text-sm text-white">Account</button>
+        </div>
+
+        <!-- Settings Panel -->
+        <div class="bg-panel-bg border border-gray-800 p-8 rounded-2xl max-w-2xl">
+            <h2 class="text-2xl font-bold mb-1">Accounts</h2>
+            <p class="text-text-muted mb-8">You can manage your accounts here.</p>
+
+            <!-- Account Information -->
+            <div class="mb-8">
+                <h3 class="text-lg font-semibold mb-4">Account Information</h3>
+                <div class="space-y-4">
+                    <div>
+                        <label class="text-sm text-text-muted block mb-1">Codefolio Id:</label>
+                        <div class="flex gap-4 items-center">
+                            <input type="text" value="Maruf_Hossain" class="bg-input-bg border border-gray-700 p-2 rounded w-64 text-sm">
+                            <button class="text-blue-500 text-sm">Edit</button>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="text-sm text-text-muted block mb-1">Email:</label>
+                        <input type="text" value="marufhossain745@gmail.com" class="bg-input-bg border border-gray-700 p-2 rounded w-64 text-sm">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Update Password -->
+            <div class="mb-8">
+                <h3 class="text-lg font-semibold mb-4">Update Password</h3>
+                <div class="space-y-4">
+                    <div>
+                        <label class="text-sm text-text-muted block mb-1">Original Password:</label>
+                        <input type="password" value="************" class="bg-input-bg border border-gray-700 p-2 rounded w-64 text-sm">
+                    </div>
+                    <div>
+                        <label class="text-sm text-text-muted block mb-1">New Password:</label>
+                        <input type="password" placeholder="new password" class="bg-input-bg border border-gray-700 p-2 rounded w-64 text-sm">
+                    </div>
+                    <div>
+                        <label class="text-sm text-text-muted block mb-1">Confirm Password:</label>
+                        <input type="password" placeholder="confirm password" class="bg-input-bg border border-gray-700 p-2 rounded w-64 text-sm">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="flex justify-between items-center mt-10">
+                <button class="bg-red-900 text-red-200 px-6 py-2 rounded text-sm font-bold">Delete</button>
+                <button class="bg-green-700 text-white px-8 py-2 rounded text-sm font-bold">Save</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

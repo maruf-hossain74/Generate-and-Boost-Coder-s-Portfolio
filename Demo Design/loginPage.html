@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeFolio - Sign In</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-dark': '#070b14', // Right panel dark void
+                        'panel-left': '#13192b',   // Left panel slightly lighter slate
+                        'card-bg': '#1a2136',      // Form card background
+                        'accent-cyan': '#13d4f1',  // Primary button color
+                        'text-muted': '#8f9bb3',
+                        'border-light': 'rgba(255, 255, 255, 0.08)'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #070b14;
+            color: #ffffff;
+        }
+        /* Custom scrollbar for form inputs */
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover, 
+        input:-webkit-autofill:focus, 
+        input:-webkit-autofill:active{
+            -webkit-box-shadow: 0 0 0 30px #111624 inset !important;
+            -webkit-text-fill-color: white !important;
+            transition: background-color 5000s ease-in-out 0s;
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col lg:flex-row">
+
+    <!-- Left Panel: Value Proposition & Branding -->
+    <div class="lg:w-1/2 bg-panel-left flex flex-col justify-center p-8 lg:p-24 relative overflow-hidden border-r border-border-light">
+        <div class="max-w-xl mx-auto w-full z-10 relative">
+            
+            <!-- Branding / Logo -->
+            <div class="flex items-center gap-3 mb-16">
+                <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center font-bold text-2xl shadow-[0_0_15px_rgba(19,212,241,0.3)]">
+                    CF
+                </div>
+                <div>
+                    <span class="font-bold text-2xl tracking-wide">CODEFOLIO</span>
+                    <p class="text-[10px] text-text-muted uppercase tracking-widest leading-none mt-1">Build Your Digital Portfolio</p>
+                </div>
+            </div>
+
+            <!-- Headlines -->
+            <h1 class="text-4xl lg:text-5xl font-bold leading-[1.15] tracking-tight mb-6">
+                Your entire coding<br/>journey, unified.
+            </h1>
+            <p class="text-text-muted text-lg leading-relaxed mb-10 max-w-md italic">
+                Join 500+ developers who track their progress, compete on leaderboards, and build standout portfolios that land jobs.
+            </p>
+
+            <!-- Platform Tags -->
+            <div class="flex flex-wrap gap-3 mb-16">
+                <div class="flex items-center gap-2 bg-white/5 border border-border-light px-3 py-1.5 rounded text-sm font-mono text-gray-300">
+                    <div class="w-2 h-2 rounded-full bg-orange-400"></div> LeetCode
+                </div>
+                <div class="flex items-center gap-2 bg-white/5 border border-border-light px-3 py-1.5 rounded text-sm font-mono text-gray-300">
+                    <div class="w-2 h-2 rounded-full bg-blue-400"></div> Codeforces
+                </div>
+                <div class="flex items-center gap-2 bg-white/5 border border-border-light px-3 py-1.5 rounded text-sm font-mono text-gray-300">
+                    <div class="w-2 h-2 rounded-full bg-green-500"></div> HackerRank
+                </div>
+                <div class="flex items-center gap-2 bg-white/5 border border-border-light px-3 py-1.5 rounded text-sm font-mono text-gray-300">
+                    <div class="w-2 h-2 rounded-full bg-purple-500"></div> CodeChef
+                </div>
+                <div class="flex items-center gap-2 bg-white/5 border border-border-light px-3 py-1.5 rounded text-sm font-mono text-gray-300">
+                    <div class="w-2 h-2 rounded-full bg-red-500"></div> AtCoder
+                </div>
+            </div>
+
+            <!-- Testimonial Card -->
+            <div class="bg-card-bg/60 border border-border-light rounded-xl p-6 shadow-lg max-w-lg relative backdrop-blur-sm">
+                <p class="text-gray-300 mb-6 italic leading-relaxed text-sm lg:text-base">
+                    "CodeFolio helped me to maintain consistency and to reach from 1100 to 1800 rating in just 2 months."
+                </p>
+                <div class="flex items-center gap-4">
+                    <img src="https://i.pravatar.cc/150?img=12" alt="Alex Rabbi" class="w-10 h-10 rounded-full border border-gray-600">
+                    <div>
+                        <div class="font-bold text-sm">Alex Rabbi</div>
+                        <div class="text-xs text-text-muted font-mono">SDE @ Samsung • LeetCode 2100+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Panel: Login Form -->
+    <div class="lg:w-1/2 bg-primary-dark flex items-center justify-center p-8">
+        
+        <div class="w-full max-w-md bg-card-bg border border-border-light rounded-2xl p-8 lg:p-10 shadow-2xl">
+            
+            <!-- Header -->
+            <h2 class="text-2xl font-bold mb-2">Welcome back</h2>
+            <p class="text-text-muted text-sm mb-8 italic">Sign in to your CodeFolio account</p>
+
+            <!-- Social Logins -->
+            <div class="grid grid-cols-2 gap-4 mb-8">
+                <button class="flex items-center justify-center gap-2 bg-[#1f2937] hover:bg-gray-700 border border-border-light rounded-lg py-2.5 text-sm font-medium transition-colors">
+                    <i data-lucide="github" class="w-4 h-4"></i> GitHub
+                </button>
+                <button class="flex items-center justify-center gap-2 bg-[#1f2937] hover:bg-gray-700 border border-border-light rounded-lg py-2.5 text-sm font-medium transition-colors">
+                    <i data-lucide="globe" class="w-4 h-4"></i> Google
+                </button>
+            </div>
+
+            <!-- Divider -->
+            <div class="relative flex items-center mb-8">
+                <div class="flex-grow border-t border-border-light"></div>
+                <span class="flex-shrink-0 mx-4 text-text-muted text-xs uppercase tracking-widest font-semibold">OR</span>
+                <div class="flex-grow border-t border-border-light"></div>
+            </div>
+
+            <!-- Form -->
+            <form class="space-y-5">
+                
+                <!-- Email Input -->
+                <div>
+                    <label class="block text-sm font-medium text-gray-300 mb-2">Email address</label>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-500">
+                            <i data-lucide="mail" class="w-4 h-4"></i>
+                        </div>
+                        <input type="email" class="w-full bg-[#111624] border border-border-light rounded-lg py-2.5 pl-10 pr-3 text-sm text-white focus:outline-none focus:border-accent-cyan focus:ring-1 focus:ring-accent-cyan transition-colors" placeholder="you@example.com">
+                    </div>
+                </div>
+
+                <!-- Password Input -->
+                <div>
+                    <div class="flex justify-between items-center mb-2">
+                        <label class="block text-sm font-medium text-gray-300">Password</label>
+                        <a href="#" class="text-accent-cyan text-sm hover:underline">Forgot password?</a>
+                    </div>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-500">
+                            <i data-lucide="lock" class="w-4 h-4"></i>
+                        </div>
+                        <input type="password" class="w-full bg-[#111624] border border-border-light rounded-lg py-2.5 pl-10 pr-10 text-sm text-white focus:outline-none focus:border-accent-cyan focus:ring-1 focus:ring-accent-cyan transition-colors" placeholder="Enter your password">
+                        <button type="button" class="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-500 hover:text-gray-300">
+                            <i data-lucide="eye-off" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="button" class="w-full bg-accent-cyan hover:bg-cyan-400 text-black font-bold text-sm py-3 rounded-lg flex items-center justify-center gap-2 mt-6 transition-transform transform hover:-translate-y-0.5">
+                    Sign In to CodeFolio
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </button>
+            </form>
+
+            <!-- Bottom Links -->
+            <div class="mt-8 text-center">
+                <a href="#" class="text-text-muted text-sm hover:text-white transition-colors italic">
+                    Don't have an account? Create one free &rarr;
+                </a>
+            </div>
+
+            <!-- Security Badge -->
+            <div class="mt-8 pt-6 border-t border-border-light flex items-center justify-center gap-2 text-xs text-gray-500">
+                <i data-lucide="shield-check" class="w-3.5 h-3.5 text-green-500"></i>
+                <span class="italic">Secured with 256-bit SSL encryption</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

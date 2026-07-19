@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#090d14] text-white p-10">
+    <!-- Header -->
+    <header class="flex justify-between items-center mb-12">
+        <div class="flex items-center gap-2 font-bold text-lg tracking-wider">
+            <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-cyan-500 to-blue-600"></div>
+            CODEFOLOI
+        </div>
+        <div class="space-x-4">
+            <button class="text-gray-400">Portfolios</button>
+            <button class="bg-gray-800 px-4 py-2 rounded-lg">Sign In</button>
+        </div>
+    </header>
+
+    <!-- Profile Hero -->
+    <section class="flex items-center gap-6 mb-12">
+        <img src="avatar.png" class="w-24 h-24 rounded-full border-4 border-gray-800">
+        <div>
+            <h1 class="text-3xl font-bold">Maruf Hossain</h1>
+            <p class="text-gray-400">@maruf_codes • Full Stack Developer • Competitive Programmer</p>
+            <div class="flex gap-2 mt-2">
+                <span class="bg-cyan-900/30 text-cyan-400 px-3 py-1 rounded-full text-xs">Competitive Programmer</span>
+                <span class="bg-purple-900/30 text-purple-400 px-3 py-1 rounded-full text-xs">Open Source</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <div class="grid grid-cols-5 gap-4 bg-[#0c121e] p-8 rounded-2xl border border-gray-800 mb-8">
+        <div><p class="text-2xl font-bold text-cyan-400">3,172</p><p class="text-xs text-gray-500">Problems Solved</p></div>
+        <div><p class="text-2xl font-bold text-purple-400">1,409</p><p class="text-xs text-gray-500">Max CF Rating</p></div>
+        <div><p class="text-2xl font-bold text-orange-400">228</p><p class="text-xs text-gray-500">Day Streak</p></div>
+        <div><p class="text-2xl font-bold text-red-400">#5,016</p><p class="text-xs text-gray-500">Global Rank</p></div>
+        <div><p class="text-2xl font-bold text-emerald-400">8</p><p class="text-xs text-gray-500">Platforms Connected</p></div>
+    </div>
+
+    <!-- Topic Mastery & Achievements -->
+    <div class="grid grid-cols-2 gap-8">
+        <!-- Topic Mastery -->
+        <div class="bg-[#0c121e] p-6 rounded-2xl border border-gray-800">
+            <h2 class="font-bold mb-6">Topic Mastery</h2>
+            <div class="space-y-4">
+                <div>
+                    <div class="flex justify-between text-xs mb-1"><span>Dynamic Programming</span><span>92%</span></div>
+                    <div class="h-2 bg-gray-800 rounded-full"><div class="h-full bg-cyan-400 w-[92%] rounded-full"></div></div>
+                </div>
+                <!-- Add more rows here -->
+            </div>
+        </div>
+
+        <!-- Achievements -->
+        <div class="bg-[#0c121e] p-6 rounded-2xl border border-gray-800">
+            <h2 class="font-bold mb-6">Achievements & Badges</h2>
+            <div class="grid grid-cols-3 gap-4">
+                <div class="p-4 border border-gray-700 rounded-xl hover:border-cyan-500 transition-all cursor-pointer">
+                    <div class="text-orange-400 mb-2">★</div>
+                    <p class="text-xs font-bold">200+ Day Streak</p>
+                </div>
+                <!-- Additional badges here -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

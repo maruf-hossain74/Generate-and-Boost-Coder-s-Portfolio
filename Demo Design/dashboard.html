@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeFolio - Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'app-bg': '#090d14',
+                        'sidebar-bg': '#0c121e',
+                        'panel-bg': '#121927',
+                        'card-bg': '#1a2235',
+                        'border-dim': 'rgba(255, 255, 255, 0.05)',
+                        'text-muted': '#8f9bb3',
+                        'accent-cyan': '#13d4f1',
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #090d14; color: #ffffff; }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex">
+
+    <!-- Sidebar -->
+    <div class="w-64 bg-sidebar-bg border-r border-gray-800 flex flex-col justify-between p-6">
+        <div>
+            <div class="flex items-center gap-2 mb-10 font-bold text-lg tracking-wider">
+                <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-cyan-500 to-blue-600"></div>
+                CODEFOLOI
+            </div>
+            <div class="space-y-6 text-text-muted">
+                <div class="flex items-center gap-3 text-white bg-gray-900 p-2 rounded"><i data-lucide="layout-grid" class="w-5 h-5"></i> Dashboard</div>
+                <div class="flex items-center gap-3"><i data-lucide="user" class="w-5 h-5"></i> My Portfolio</div>
+                <div class="flex items-center gap-3"><i data-lucide="trophy" class="w-5 h-5"></i> Leaderboard</div>
+                <div class="flex items-center gap-3"><i data-lucide="calendar" class="w-5 h-5"></i> Contests <span class="bg-cyan-500 text-black text-[10px] px-1.5 rounded-full font-bold">3</span></div>
+                <div class="flex items-center gap-3"><i data-lucide="link" class="w-5 h-5"></i> Platforms</div>
+                <div class="flex items-center gap-3"><i data-lucide="settings" class="w-5 h-5"></i> Settings</div>
+            </div>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg flex items-center gap-3">
+            <div class="w-10 h-10 bg-gray-600 rounded-full"></div>
+            <div>
+                <p class="text-sm font-bold">Alex_Coder</p>
+                <p class="text-xs text-cyan-400">Pro Plan • 147 days streak</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex-1 p-10">
+        <div class="flex justify-between items-center mb-8">
+            <h1 class="text-2xl font-bold">Good morning, Maruf</h1>
+            <button class="bg-cyan-500/10 text-cyan-400 px-4 py-2 rounded-lg text-sm font-bold border border-cyan-500/20">Share Portfolio</button>
+        </div>
+
+        <!-- Top Metrics -->
+        <div class="grid grid-cols-4 gap-4 mb-8">
+            <div class="bg-panel-bg p-6 rounded-2xl border border-gray-800">
+                <p class="text-text-muted text-xs">TOTAL SOLVED</p>
+                <p class="text-3xl font-bold text-cyan-400 mt-2">1,847</p>
+                <p class="text-emerald-500 text-xs mt-1">+23 this week</p>
+            </div>
+            <div class="bg-panel-bg p-6 rounded-2xl border border-gray-800">
+                <p class="text-text-muted text-xs">CF RATING</p>
+                <p class="text-3xl font-bold text-purple-400 mt-2">2,154</p>
+                <p class="text-gray-400 text-xs mt-1">Expert • +122 this month</p>
+            </div>
+            <div class="bg-panel-bg p-6 rounded-2xl border border-gray-800">
+                <p class="text-text-muted text-xs">CURRENT STREAK</p>
+                <p class="text-3xl font-bold text-orange-400 mt-2">147</p>
+                <p class="text-gray-400 text-xs mt-1">Days consecutive • Best: 203</p>
+            </div>
+            <div class="bg-panel-bg p-6 rounded-2xl border border-cyan-500/50">
+                <p class="text-text-muted text-xs">GLOBAL RANK</p>
+                <p class="text-3xl font-bold text-red-400 mt-2">#312</p>
+                <p class="text-gray-400 text-xs mt-1">Top 0.6% globally</p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-6">
+            <!-- Heatmap -->
+            <div class="col-span-2 bg-panel-bg p-6 rounded-2xl border border-gray-800">
+                <p class="text-sm font-semibold mb-4">Activity Heatmap</p>
+                <div class="h-32 bg-gray-900 rounded-lg flex items-center justify-center text-text-muted text-xs">
+                    [Heatmap Visualization Grid]
+                </div>
+            </div>
+            <!-- Platforms -->
+            <div class="bg-panel-bg p-6 rounded-2xl border border-gray-800">
+                <p class="text-sm font-semibold mb-4">Platform Overview</p>
+                <div class="space-y-4 text-xs">
+                    <div><p>LeetCode: 1,284 solved</p><div class="h-1.5 bg-orange-400 w-3/4 rounded-full mt-1"></div></div>
+                    <div><p>Codeforces: 1,347 problems</p><div class="h-1.5 bg-cyan-400 w-4/5 rounded-full mt-1"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

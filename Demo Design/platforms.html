@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeFolio - Platforms Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'app-bg': '#090d14',
+                        'sidebar-bg': '#0c121e',
+                        'panel-bg': '#121927',
+                        'card-bg': '#1a2235',
+                        'border-dim': 'rgba(255, 255, 255, 0.05)',
+                        'text-muted': '#8f9bb3',
+                        'accent-cyan': '#13d4f1',
+                        'accent-green': '#10b981'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #090d14; color: #ffffff; }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex">
+
+    <div class="w-64 bg-sidebar-bg border-r border-border-dim flex flex-col justify-between">
+        <div>
+            <div class="p-6 flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center font-bold text-lg shadow-[0_0_15px_rgba(19,212,241,0.3)]">CF</div>
+                <div class="flex flex-col leading-tight">
+                    <span class="text-xl font-bold tracking-wider">CODEFOLOI</span>
+                    <span class="text-[9px] text-text-muted tracking-widest uppercase">Build your digital portfolio</span>
+                </div>
+            </div>
+            <nav class="px-4 mt-4 space-y-1">
+                <a href="#" class="flex items-center gap-3 px-4 py-2.5 text-text-muted hover:text-white rounded-lg transition-colors">
+                    <i data-lucide="layout-grid" class="w-5 h-5"></i><span>Dashboard</span>
+                </a>
+                <a href="#" class="flex items-center gap-3 px-4 py-2.5 text-text-muted hover:text-white rounded-lg transition-colors">
+                    <i data-lucide="user" class="w-5 h-5"></i><span>My Portfolio</span>
+                </a>
+                <a href="#" class="flex items-center gap-3 px-4 py-2.5 text-text-muted hover:text-white rounded-lg transition-colors">
+                    <i data-lucide="trophy" class="w-5 h-5"></i><span>Leaderboard</span>
+                </a>
+                <a href="#" class="flex items-center gap-3 px-4 py-2.5 bg-card-bg text-accent-cyan rounded-lg transition-colors border border-border-dim">
+                    <i data-lucide="link" class="w-5 h-5"></i><span>Platforms</span>
+                </a>
+                <a href="#" class="flex items-center gap-3 px-4 py-2.5 text-text-muted hover:text-white rounded-lg transition-colors">
+                    <i data-lucide="settings" class="w-5 h-5"></i><span>Settings</span>
+                </a>
+            </nav>
+        </div>
+        <div class="p-4">
+            <div class="bg-card-bg rounded-xl p-3 flex items-center gap-3 border border-border-dim shadow-lg">
+                <img src="https://i.pravatar.cc/150?img=11" alt="Maruf Hossain" class="w-10 h-10 rounded-full border border-border-dim">
+                <div class="flex flex-col justify-center">
+                    <span class="text-sm font-semibold tracking-wide text-gray-100">Maruf Hossain</span>
+                    <span class="text-[11px] text-accent-cyan font-mono mt-0.5 tracking-tight">8 Platforms Connected</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex-1 p-10">
+        <div class="flex gap-2 mb-8">
+            <button class="bg-accent-cyan text-app-bg px-4 py-1.5 rounded-lg text-sm font-semibold flex items-center gap-2">
+                <div class="w-3 h-2 bg-blue-600 rounded-sm"></div> Codeforces
+            </button>
+            <button class="bg-card-bg border border-border-dim text-text-muted px-4 py-1.5 rounded-lg text-sm font-medium">Codechef</button>
+            <button class="bg-card-bg border border-border-dim text-text-muted px-4 py-1.5 rounded-lg text-sm font-medium">Atcoder</button>
+            <button class="bg-card-bg border border-border-dim text-text-muted px-4 py-1.5 rounded-lg text-sm font-medium">Hackerrank</button>
+        </div>
+
+        <div class="grid grid-cols-12 gap-6">
+            <div class="col-span-3 bg-panel-bg border border-border-dim rounded-2xl p-6">
+                <div class="text-xs text-text-muted uppercase mb-1">Total Questions</div>
+                <div class="text-3xl font-bold text-accent-green font-mono">2072</div>
+            </div>
+            <div class="col-span-3 bg-panel-bg border border-border-dim rounded-2xl p-6">
+                <div class="text-xs text-text-muted uppercase mb-1">Total Active Days</div>
+                <div class="text-3xl font-bold text-accent-green font-mono">772</div>
+            </div>
+            <div class="col-span-6 bg-panel-bg border border-border-dim rounded-2xl p-6 h-36 flex items-center justify-center text-text-muted">
+                [Activity Heatmap Visualization]
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-6 mt-6">
+            <div class="bg-panel-bg border border-border-dim rounded-2xl p-6">
+                <h3 class="text-sm font-bold mb-4">Contest Ratings</h3>
+                <div class="text-accent-green font-bold text-3xl">Pupil <span class="text-white">1303</span></div>
+                <div class="text-xs text-text-muted mt-1">(max : 1409)</div>
+            </div>
+            <div class="bg-panel-bg border border-border-dim rounded-2xl p-6">
+                 <h3 class="text-sm font-bold mb-4">Topic Wise Distribution</h3>
+                 <div class="space-y-2">
+                     <div class="h-4 bg-accent-cyan/20 w-3/4 rounded"></div>
+                     <div class="h-4 bg-accent-cyan/20 w-2/3 rounded"></div>
+                     <div class="h-4 bg-accent-cyan/20 w-1/2 rounded"></div>
+                 </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

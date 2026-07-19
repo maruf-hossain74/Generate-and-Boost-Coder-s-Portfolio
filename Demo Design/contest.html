@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeFolio - Upcoming Contests</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'app-bg': '#090d14',
+                        'sidebar-bg': '#0c121e',
+                        'panel-bg': '#121927',
+                        'card-bg': '#1a2235',
+                        'border-dim': 'rgba(255, 255, 255, 0.05)',
+                        'border-strong': 'rgba(255, 255, 255, 0.1)',
+                        'text-muted': '#8f9bb3',
+                        'accent-cyan': '#13d4f1',
+                        'accent-orange': '#f97316',
+                        'accent-green': '#10b981',
+                        'accent-purple': '#a855f7'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #090d14; color: #ffffff; }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex">
+
+    <div class="w-64 bg-sidebar-bg border-r border-border-dim flex flex-col justify-between">
+        <div>
+            <div class="p-6 flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center font-bold text-lg shadow-[0_0_15px_rgba(19,212,241,0.3)]">CF</div>
+                <div class="flex flex-col leading-tight">
+                    <span class="text-xl font-bold tracking-wider">CODEFOLOI</span>
+                    <span class="text-[9px] text-text-muted tracking-widest uppercase">Build your digital portfolio</span>
+                </div>
+            </div>
+            <nav class="px-4 mt-4 space-y-1">
+                <a href="#" class="flex items-center gap-3 px-4 py-2.5 text-text-muted hover:text-white rounded-lg transition-colors">
+                    <i data-lucide="layout-grid" class="w-5 h-5"></i><span>Dashboard</span>
+                </a>
+                <a href="#" class="flex items-center gap-3 px-4 py-2.5 text-text-muted hover:text-white rounded-lg transition-colors">
+                    <i data-lucide="user" class="w-5 h-5"></i><span>My Portfolio</span>
+                </a>
+                <a href="#" class="flex items-center gap-3 px-4 py-2.5 text-text-muted hover:text-white rounded-lg transition-colors">
+                    <i data-lucide="trophy" class="w-5 h-5"></i><span>Leaderboard</span>
+                </a>
+                <a href="#" class="flex items-center gap-3 px-4 py-2.5 bg-card-bg text-accent-cyan rounded-lg transition-colors border border-border-dim">
+                    <i data-lucide="calendar" class="w-5 h-5"></i><span>Contests</span>
+                </a>
+                <a href="#" class="flex items-center gap-3 px-4 py-2.5 text-text-muted hover:text-white rounded-lg transition-colors">
+                    <i data-lucide="link" class="w-5 h-5"></i><span>Platforms</span>
+                </a>
+                <a href="#" class="flex items-center gap-3 px-4 py-2.5 text-text-muted hover:text-white rounded-lg transition-colors">
+                    <i data-lucide="settings" class="w-5 h-5"></i><span>Settings</span>
+                </a>
+            </nav>
+        </div>
+        <div class="p-4">
+            <div class="bg-card-bg rounded-xl p-3 flex items-center gap-3 border border-border-dim shadow-lg">
+                <img src="https://i.pravatar.cc/150?img=11" alt="Alex_Coder" class="w-10 h-10 rounded-full border border-border-dim">
+                <div class="flex flex-col justify-center">
+                    <span class="text-sm font-semibold tracking-wide text-gray-100">Alex_Coder</span>
+                    <span class="text-[11px] text-accent-cyan font-mono mt-0.5 tracking-tight">5 contests this week</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex-1 p-10">
+        <div class="flex justify-between items-center mb-8">
+            <div class="flex items-center gap-6">
+                <h1 class="text-2xl font-bold">Upcoming Contests</h1>
+                <button class="bg-accent-cyan/10 text-accent-cyan px-4 py-1.5 rounded-full text-xs font-bold flex items-center gap-2 border border-accent-cyan/20">
+                    <i data-lucide="bell" class="w-3 h-3"></i> Enable Reminders
+                </button>
+            </div>
+        </div>
+        
+        <div class="flex gap-2 mb-8">
+            <button class="bg-accent-cyan text-app-bg px-4 py-1.5 rounded-lg text-sm font-semibold">All Contests</button>
+            <button class="bg-card-bg border border-border-dim text-text-muted px-4 py-1.5 rounded-lg text-sm font-medium">LeetCode</button>
+            <button class="bg-card-bg border border-border-dim text-text-muted px-4 py-1.5 rounded-lg text-sm font-medium">Codeforces</button>
+        </div>
+
+        <div class="bg-emerald-500/10 border border-emerald-500/20 rounded-xl p-4 mb-8 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <i data-lucide="mail" class="w-5 h-5 text-emerald-500"></i>
+                <span class="text-sm font-medium">Email + Push reminders are enabled. <span class="text-text-muted italic">You'll be notified 1 hour before each contest you've registered for.</span></span>
+            </div>
+            <button class="text-xs text-accent-cyan font-semibold hover:underline">Manage settings &rarr;</button>
+        </div>
+
+        <div class="grid grid-cols-2 gap-6">
+            <div class="bg-panel-bg border border-accent-cyan/20 rounded-2xl p-6 relative">
+                <div class="flex items-center gap-2 mb-4">
+                    <div class="w-2 h-2 rounded-full bg-accent-orange"></div>
+                    <span class="text-xs font-mono text-accent-orange uppercase">LeetCode</span>
+                    <span class="bg-red-500/10 text-red-500 px-2 py-0.5 rounded text-[10px] font-bold">UPCOMING</span>
+                </div>
+                <h3 class="text-lg font-bold mb-1">Weekly Contest 418</h3>
+                <p class="text-sm text-text-muted mb-6">Standard 4-problem competitive contest</p>
+                
+                <div class="flex gap-8 mb-6">
+                    <div>
+                        <div class="text-[10px] text-text-muted uppercase">Starts In</div>
+                        <div class="font-mono text-accent-cyan font-bold">2d 14h 22m</div>
+                    </div>
+                    <div>
+                        <div class="text-[10px] text-text-muted uppercase">Duration</div>
+                        <div class="font-mono text-gray-200 font-bold">90 min</div>
+                    </div>
+                    <div>
+                        <div class="text-[10px] text-text-muted uppercase">Date & Time</div>
+                        <div class="font-mono text-gray-200 font-bold">Sun, 8:00 AM BD</div>
+                    </div>
+                </div>
+                <div class="flex gap-3">
+                    <button class="bg-accent-cyan text-black px-4 py-2 rounded-lg text-sm font-bold flex-1 flex items-center justify-center gap-2">
+                        <i data-lucide="bell" class="w-4 h-4"></i> Set Reminder
+                    </button>
+                    <button class="bg-card-bg border border-border-dim text-white px-4 py-2 rounded-lg text-sm font-medium flex-1">
+                        Register
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
