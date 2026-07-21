@@ -21,6 +21,18 @@ router.get("/upcoming", async (req, res) => {
   }
 });
 
+router.get("/reminders", auth, async (req, res) => {
+  try {
+    const reminders = await ContestReminder.find({ userId: req.user._id })
+      .populate("contestId", "platform name startTime url duration")
+      .lean();
+
+    res.json({ reminders });
+  } catch (err) {
+    res.status(500).json({ error: "Server error" });
+  }
+});
+
 router.post("/:id/reminder", auth, async (req, res) => {
   try {
     const contest = await Contest.findById(req.params.id);

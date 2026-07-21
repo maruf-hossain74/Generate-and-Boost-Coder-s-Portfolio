@@ -105,14 +105,31 @@ router.get("/portfolio/:codefolioId", async (req, res) => {
       UserStats.findOne({ userId: user._id }),
       PlatformConnection.find(
         { userId: user._id, isConnected: true },
-        { platform: 1, handle: 1, profileUrl: 1, _id: 0 }
+        { platform: 1, handle: 1, profileUrl: 1, totalSolved: 1, topics: 1, _id: 0 }
       ),
     ]);
+
+    const allTopics = {};
+    for (const p of platforms) {
+      for (const t of p.topics || []) {
+        allTopics[t.name] = (allTopics[t.name] || 0) + t.count;
+      }
+    }
+    const maxTopicCount = Math.max(...Object.values(allTopics), 1);
+    const topicMastery = Object.entries(allTopics)
+      .map(([name, count]) => ({
+        name,
+        count,
+        percentage: Math.round((count / maxTopicCount) * 100),
+      }))
+      .sort((a, b) => b.count - a.count)
+      .slice(0, 10);
 
     res.json({
       user: user.toPublicJSON(),
       stats: stats || {},
       platforms,
+      topicMastery,
     });
   } catch (err) {
     res.status(500).json({ error: "Server error" });

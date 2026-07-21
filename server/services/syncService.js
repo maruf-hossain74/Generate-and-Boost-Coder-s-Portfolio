@@ -60,6 +60,8 @@ async function syncUser(userId) {
         }
       }
 
+      conn.totalSolved = data.totalSolved || 0;
+      conn.topics = (data.topics || []).slice(0, 20);
       conn.lastSyncedAt = new Date();
       await conn.save();
     }

@@ -37,6 +37,14 @@ const platformConnectionSchema = new mongoose.Schema(
       type: Date,
       default: null,
     },
+    totalSolved: {
+      type: Number,
+      default: 0,
+    },
+    topics: {
+      type: [{ name: String, count: Number }],
+      default: [],
+    },
   },
   { timestamps: true }
 );
