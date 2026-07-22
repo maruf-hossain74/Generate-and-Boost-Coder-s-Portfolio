@@ -27,7 +27,7 @@ function DeleteModal({ open, onClose, onConfirm }) {
         <div className="flex gap-3 justify-end">
           <button
             onClick={onClose}
-            className="bg-gray-800 text-text-muted px-4 py-2 rounded-lg text-sm hover:text-white transition"
+            className="bg-gray-800 text-text-muted px-4 py-2 rounded-lg text-sm hover:text-body-text transition"
           >
             Cancel
           </button>
@@ -184,7 +184,7 @@ export default function SettingsPage() {
             className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
               tab === t
                 ? "bg-accent-cyan text-app-bg font-semibold"
-                : "bg-gray-800 text-text-muted hover:text-white"
+                : "bg-gray-800 text-text-muted hover:text-body-text"
             }`}
           >
             {t}
@@ -238,7 +238,7 @@ export default function SettingsPage() {
               </div>
               <button
                 onClick={handleSaveBasic}
-                className="bg-accent-cyan text-black font-bold px-6 py-2 rounded text-sm hover:bg-cyan-400 transition"
+                className="bg-accent-cyan text-body-text font-bold px-6 py-2 rounded text-sm hover:bg-cyan-400 transition"
               >
                 Save
               </button>
@@ -278,7 +278,7 @@ export default function SettingsPage() {
                           className={`px-3 py-1 rounded-full text-xs border transition-colors ${
                             active
                               ? "bg-accent-cyan/10 text-accent-cyan border-accent-cyan/20"
-                              : "bg-gray-800 text-text-muted border-gray-700 hover:text-white"
+                              : "bg-gray-800 text-text-muted border-gray-700 hover:text-body-text"
                           }`}
                         >
                           {b}
@@ -336,7 +336,7 @@ export default function SettingsPage() {
                         />
                         <button
                           onClick={() => handleConnect(p.value)}
-                          className="bg-accent-cyan text-black text-xs font-bold px-3 py-2 rounded hover:bg-cyan-400 transition shrink-0"
+                          className="bg-accent-cyan text-body-text text-xs font-bold px-3 py-2 rounded hover:bg-cyan-400 transition shrink-0"
                         >
                           Connect
                         </button>
@@ -420,7 +420,7 @@ export default function SettingsPage() {
               </button>
               <button
                 onClick={handleSaveAccount}
-                className="bg-accent-cyan text-black font-bold px-8 py-2 rounded text-sm hover:bg-cyan-400 transition"
+                className="bg-accent-cyan text-body-text font-bold px-8 py-2 rounded text-sm hover:bg-cyan-400 transition"
               >
                 Save
               </button>

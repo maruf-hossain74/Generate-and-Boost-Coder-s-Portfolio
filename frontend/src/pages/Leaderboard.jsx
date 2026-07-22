@@ -21,7 +21,7 @@ function getPodium(data) {
 }
 
 function ChangeIcon({ change }) {
-  if (change > 0) return <ChevronUp className="w-4 h-4 text-emerald-400" />;
+  if (change > 0) return <ChevronUp className="w-4 h-4 text-accent-green" />;
   if (change < 0) return <ChevronDown className="w-4 h-4 text-red-500" />;
   return <Minus className="w-4 h-4 text-text-muted" />;
 }
@@ -120,7 +120,7 @@ export default function LeaderboardPage() {
             placeholder="Search coders..."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            className="w-full bg-card-bg border border-gray-800 rounded-lg pl-9 pr-4 py-2 text-sm focus:outline-none focus:border-accent-cyan text-gray-200 placeholder-text-muted transition-colors"
+            className="w-full bg-card-bg border border-gray-800 rounded-lg pl-9 pr-4 py-2 text-sm focus:outline-none focus:border-accent-cyan text-body-text placeholder-text-muted transition-colors"
           />
         </div>
       </div>
@@ -133,7 +133,7 @@ export default function LeaderboardPage() {
             className={`px-4 py-1.5 rounded-lg text-sm font-medium transition-colors ${
               filter === f.value
                 ? "bg-accent-cyan text-app-bg font-semibold"
-                : "bg-card-bg border border-gray-800 text-text-muted hover:text-white"
+                : "bg-card-bg border border-gray-800 text-text-muted hover:text-body-text"
             }`}
           >
             {f.label}
@@ -254,7 +254,7 @@ export default function LeaderboardPage() {
                       <div className="flex flex-col min-w-0">
                         <span
                           className={`text-sm font-semibold truncate ${
-                            isCurrentUser ? "text-accent-cyan" : "text-gray-200"
+                            isCurrentUser ? "text-accent-cyan" : "text-body-text"
                           }`}
                         >
                           {entry.displayName}
@@ -266,7 +266,7 @@ export default function LeaderboardPage() {
                     </div>
                     <div
                       className={`font-mono text-center text-sm font-semibold hidden sm:block ${
-                        isCurrentUser ? "text-accent-cyan" : "text-white"
+                        isCurrentUser ? "text-accent-cyan" : "text-body-text"
                       }`}
                     >
                       {entry.totalSolved?.toLocaleString()}
@@ -306,7 +306,7 @@ export default function LeaderboardPage() {
               <button
                 onClick={handleLoadMore}
                 disabled={loading}
-                className="bg-card-bg border border-gray-800 text-text-muted hover:text-white px-6 py-2 rounded-lg text-sm font-medium transition-colors disabled:opacity-50"
+                className="bg-card-bg border border-gray-800 text-text-muted hover:text-body-text px-6 py-2 rounded-lg text-sm font-medium transition-colors disabled:opacity-50"
               >
                 {loading ? "Loading..." : "Load More"}
               </button>

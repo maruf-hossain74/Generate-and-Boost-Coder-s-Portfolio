@@ -8,20 +8,20 @@ import demoUserImage from "../../resources/images/saikat.png"
 
 export default function Landing() {
   return (
-    <div className="bg-primary-dark text-white overflow-x-hidden">
+    <div className="bg-primary-dark overflow-x-hidden">
       <nav className="fixed w-full top-0 z-50 bg-[rgba(21,27,44,0.7)] backdrop-blur-[10px] border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-20 items-center">
             <Logo className="h-10 w-auto" />
             <div className="hidden md:flex space-x-8">
-              <a href="#features" className="text-gray-300 hover:text-accent-cyan px-3 py-2 text-sm font-medium transition-colors">Features</a>
-              <Link to="/leaderboard" className="text-gray-300 hover:text-accent-cyan px-3 py-2 text-sm font-medium transition-colors">Leaderboard</Link>
-              <a href="#" className="text-gray-300 hover:text-accent-cyan px-3 py-2 text-sm font-medium transition-colors">Pricing</a>
-              <a href="#" className="text-gray-300 hover:text-accent-cyan px-3 py-2 text-sm font-medium transition-colors">Blog</a>
+              <a href="#features" className="text-text-muted hover:text-accent-cyan px-3 py-2 text-sm font-medium transition-colors">Features</a>
+              <Link to="/leaderboard" className="text-text-muted hover:text-accent-cyan px-3 py-2 text-sm font-medium transition-colors">Leaderboard</Link>
+              <a href="#" className="text-text-muted hover:text-accent-cyan px-3 py-2 text-sm font-medium transition-colors">Pricing</a>
+              <a href="#" className="text-text-muted hover:text-accent-cyan px-3 py-2 text-sm font-medium transition-colors">Blog</a>
             </div>
             <div className="hidden md:flex items-center space-x-4">
-              <Link to="/login" className="text-gray-300 hover:text-white text-sm font-medium">Sign In</Link>
-              <Link to="/signup" className="bg-accent-cyan hover:bg-cyan-400 text-black px-6 py-2.5 rounded-md text-sm font-bold transition-colors">Get Started</Link>
+              <Link to="/login" className="text-text-muted hover:text-body-text text-sm font-medium">Sign In</Link>
+              <Link to="/signup" className="bg-accent-cyan hover:bg-cyan-400 text-body-text px-6 py-2.5 rounded-md text-sm font-bold transition-colors">Get Started</Link>
             </div>
           </div>
         </div>
@@ -54,13 +54,13 @@ export default function Landing() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/signup"
-              className="bg-accent-cyan hover:bg-cyan-400 text-black px-8 py-3.5 rounded-md font-bold text-lg transition-all transform hover:scale-105"
+              className="bg-accent-cyan hover:bg-cyan-400 text-body-text px-8 py-3.5 rounded-md font-bold text-lg transition-all transform hover:scale-105"
             >
               Generate My Portfolio
             </Link>
             <a
               href="#demo"
-              className="bg-[rgba(21,27,44,0.7)] backdrop-blur-[10px] border border-white/5 hover:bg-white/10 text-white px-8 py-3.5 rounded-md font-medium text-lg flex items-center gap-2 transition-all"
+              className="bg-[rgba(21,27,44,0.7)] backdrop-blur-[10px] border border-white/5 hover:bg-white/10 text-body-text px-8 py-3.5 rounded-md font-medium text-lg flex items-center gap-2 transition-all"
             >
               <PlayCircle className="w-5 h-5" />
               Watch Demo
@@ -114,10 +114,10 @@ export default function Landing() {
                 </div>
 
                 <div className="flex gap-3 justify-center md:justify-start">
-                  <button className="bg-accent-cyan text-black px-4 py-2 rounded text-sm font-bold flex items-center gap-2">
+                  <button className="bg-accent-cyan text-body-text px-4 py-2 rounded text-sm font-bold flex items-center gap-2">
                     <Share2 className="w-4 h-4" /> Share Portfolio
                   </button>
-                  <button className="bg-white/5 hover:bg-white/10 border border-white/10 text-white px-4 py-2 rounded text-sm flex items-center gap-2 transition-colors">
+                  <button className="bg-white/5 hover:bg-white/10 border border-white/10 text-body-text px-4 py-2 rounded text-sm flex items-center gap-2 transition-colors">
                     <Download className="w-4 h-4" /> Export PDF
                   </button>
                 </div>
@@ -227,7 +227,7 @@ export default function Landing() {
         <p className="text-text-muted mb-10 max-w-lg mx-auto">Join 50,000+ developers who use CodeFolio to track progress and impress recruiters.</p>
         <Link
           to="/signup"
-          className="bg-accent-cyan hover:bg-cyan-400 text-black px-8 py-4 rounded-md font-bold text-lg inline-flex items-center gap-2 transition-transform transform hover:-translate-y-1"
+          className="bg-accent-cyan hover:bg-cyan-400 text-body-text px-8 py-4 rounded-md font-bold text-lg inline-flex items-center gap-2 transition-transform transform hover:-translate-y-1"
         >
           <Rocket /> Start Building Your Portfolio
         </Link>
@@ -245,20 +245,20 @@ export default function Landing() {
             <div>
               <h5 className="font-bold text-sm mb-4">Product</h5>
               <ul className="space-y-2 text-sm text-text-muted">
-                <li><Link to="/dashboard" className="hover:text-white transition-colors">Dashboard</Link></li>
-                <li><Link to="/portfolio" className="hover:text-white transition-colors">Portfolio</Link></li>
-                <li><Link to="/leaderboard" className="hover:text-white transition-colors">Leaderboard</Link></li>
-                <li><Link to="/contests" className="hover:text-white transition-colors">Contests</Link></li>
+                <li><Link to="/dashboard" className="hover:text-body-text transition-colors">Dashboard</Link></li>
+                <li><Link to="/portfolio" className="hover:text-body-text transition-colors">Portfolio</Link></li>
+                <li><Link to="/leaderboard" className="hover:text-body-text transition-colors">Leaderboard</Link></li>
+                <li><Link to="/contests" className="hover:text-body-text transition-colors">Contests</Link></li>
               </ul>
             </div>
 
             <div>
               <h5 className="font-bold text-sm mb-4">Company</h5>
               <ul className="space-y-2 text-sm text-text-muted">
-                <li><a href="#" className="hover:text-white transition-colors">About</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Privacy</a></li>
+                <li><a href="#" className="hover:text-body-text transition-colors">About</a></li>
+                <li><a href="#" className="hover:text-body-text transition-colors">Blog</a></li>
+                <li><a href="#" className="hover:text-body-text transition-colors">Careers</a></li>
+                <li><a href="#" className="hover:text-body-text transition-colors">Privacy</a></li>
               </ul>
             </div>
           </div>

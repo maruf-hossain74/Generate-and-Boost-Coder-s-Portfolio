@@ -56,7 +56,7 @@ function Heatmap({ data, year }) {
           className={`w-3 h-3 rounded-sm ${colors[level]} tooltip-container relative`}
           title={`${key}: ${count} submissions`}
         >
-          <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-1 hidden group-hover:block bg-gray-900 text-white text-[10px] px-2 py-1 rounded whitespace-nowrap z-10">
+          <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-1 hidden group-hover:block bg-gray-900 text-body-text text-[10px] px-2 py-1 rounded whitespace-nowrap z-10">
             {count} on {key}
           </div>
         </div>
@@ -106,7 +106,7 @@ function Heatmap({ data, year }) {
                   className="group relative"
                 >
                   <div className={`w-3 h-3 rounded-sm ${colors[level]}`} />
-                  <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-1 hidden group-hover:block bg-gray-900 text-white text-[10px] px-2 py-1 rounded whitespace-nowrap z-10 shadow-lg">
+                  <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-1 hidden group-hover:block bg-gray-900 text-body-text text-[10px] px-2 py-1 rounded whitespace-nowrap z-10 shadow-lg">
                     {count} submission{count !== 1 ? "s" : ""} on {key}
                   </div>
                 </div>

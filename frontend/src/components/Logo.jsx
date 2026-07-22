@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
-import logoSrc from "../../resources/logos/CodeFolioLogo.png";
+import logoSrc from "../../resources/logos/CodefolioLogo.png";
 
 export default function Logo({ className = "h-10 w-auto" }) {
   const { user } = useAuth();

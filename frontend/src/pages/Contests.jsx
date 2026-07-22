@@ -155,7 +155,7 @@ export default function ContestsPage() {
             className={`px-4 py-1.5 rounded-lg text-sm font-medium transition-colors ${
               filter === f.value
                 ? "bg-accent-cyan text-app-bg font-semibold"
-                : "bg-card-bg border border-gray-800 text-text-muted hover:text-white"
+                : "bg-card-bg border border-gray-800 text-text-muted hover:text-body-text"
             }`}
           >
             {f.label}
@@ -220,13 +220,13 @@ export default function ContestsPage() {
                   </div>
                   <div>
                     <div className="text-[10px] text-text-muted uppercase">Duration</div>
-                    <div className="font-mono text-gray-200 font-bold text-sm">
+                    <div className="font-mono text-body-text font-bold text-sm">
                       {formatDuration(contest.duration)}
                     </div>
                   </div>
                   <div>
                     <div className="text-[10px] text-text-muted uppercase">Date & Time</div>
-                    <div className="font-mono text-gray-200 font-bold text-sm">
+                    <div className="font-mono text-body-text font-bold text-sm">
                       {formatDateTime(contest.startTime)}
                     </div>
                   </div>
@@ -239,7 +239,7 @@ export default function ContestsPage() {
                       className={`px-4 py-2 rounded-lg text-sm font-bold flex-1 flex items-center justify-center gap-2 transition-colors ${
                         hasReminder
                           ? "bg-gray-800 text-text-muted hover:bg-gray-700"
-                          : "bg-accent-cyan text-black hover:bg-cyan-400"
+                          : "bg-accent-cyan text-body-text hover:bg-cyan-400"
                       }`}
                     >
                       {hasReminder ? (
@@ -253,7 +253,7 @@ export default function ContestsPage() {
                     href={contest.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-card-bg border border-gray-800 text-white px-4 py-2 rounded-lg text-sm font-medium flex-1 flex items-center justify-center gap-2 hover:bg-gray-800 transition-colors"
+                    className="bg-card-bg border border-gray-800 text-body-text px-4 py-2 rounded-lg text-sm font-medium flex-1 flex items-center justify-center gap-2 hover:bg-gray-800 transition-colors"
                   >
                     <ExternalLink className="w-4 h-4" /> Register
                   </a>

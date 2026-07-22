@@ -48,7 +48,7 @@ export default function Login() {
             {platforms.map((p) => (
               <div
                 key={p.name}
-                className="flex items-center gap-2 bg-white/5 border border-gray-800 px-3 py-1.5 rounded text-sm font-mono text-gray-300"
+                className="flex items-center gap-2 bg-white/5 border border-gray-800 px-3 py-1.5 rounded text-sm font-mono text-text-muted"
               >
                 <div className={`w-2 h-2 rounded-full ${p.color}`} />
                 {p.name}
@@ -56,7 +56,7 @@ export default function Login() {
             ))}
           </div>
           <div className="bg-card-bg/60 border border-gray-800 rounded-xl p-6 shadow-lg max-w-lg relative backdrop-blur-sm">
-            <p className="text-gray-300 mb-6 italic leading-relaxed text-sm lg:text-base">
+            <p className="text-text-muted mb-6 italic leading-relaxed text-sm lg:text-base">
               &ldquo;CodeFolio helped me to maintain consistency and to reach from 1100 to 1800 rating in just 2 months.&rdquo;
             </p>
             <div className="flex items-center gap-4">
@@ -94,7 +94,7 @@ export default function Login() {
           )}
           <form onSubmit={handleSubmit} className="space-y-5">
             <div>
-              <label className="block text-sm font-medium text-gray-300 mb-2">Email address</label>
+              <label className="block text-sm font-medium text-text-muted mb-2">Email address</label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-500">
                   <Mail className="w-4 h-4" />
@@ -103,7 +103,7 @@ export default function Login() {
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full bg-[#111624] border border-gray-800 rounded-lg py-2.5 pl-10 pr-3 text-sm text-white focus:outline-none focus:border-accent-cyan focus:ring-1 focus:ring-accent-cyan transition-colors"
+                  className="w-full bg-[#111624] border border-gray-800 rounded-lg py-2.5 pl-10 pr-3 text-sm text-body-text focus:outline-none focus:border-accent-cyan focus:ring-1 focus:ring-accent-cyan transition-colors"
                   placeholder="you@example.com"
                   required
                 />
@@ -111,7 +111,7 @@ export default function Login() {
             </div>
             <div>
               <div className="flex justify-between items-center mb-2">
-                <label className="block text-sm font-medium text-gray-300">Password</label>
+                <label className="block text-sm font-medium text-text-muted">Password</label>
                 <Link to="/forgot-password" className="text-accent-cyan text-sm hover:underline">
                   Forgot password?
                 </Link>
@@ -124,14 +124,14 @@ export default function Login() {
                   type={showPassword ? "text" : "password"}
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full bg-[#111624] border border-gray-800 rounded-lg py-2.5 pl-10 pr-10 text-sm text-white focus:outline-none focus:border-accent-cyan focus:ring-1 focus:ring-accent-cyan transition-colors"
+                  className="w-full bg-[#111624] border border-gray-800 rounded-lg py-2.5 pl-10 pr-10 text-sm text-body-text focus:outline-none focus:border-accent-cyan focus:ring-1 focus:ring-accent-cyan transition-colors"
                   placeholder="Enter your password"
                   required
                 />
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-500 hover:text-gray-300"
+                  className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-500 hover:text-text-muted"
                 >
                   {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
                 </button>
@@ -139,14 +139,14 @@ export default function Login() {
             </div>
             <button
               type="submit"
-              className="w-full bg-accent-cyan hover:bg-cyan-400 text-black font-bold text-sm py-3 rounded-lg flex items-center justify-center gap-2 mt-6 transition-transform hover:-translate-y-0.5"
+              className="w-full bg-accent-cyan hover:bg-cyan-400 text-body-text font-bold text-sm py-3 rounded-lg flex items-center justify-center gap-2 mt-6 transition-transform hover:-translate-y-0.5"
             >
               Sign In to CodeFolio
               <ArrowRight className="w-4 h-4" />
             </button>
           </form>
           <div className="mt-8 text-center">
-            <Link to="/signup" className="text-text-muted text-sm hover:text-white transition-colors italic">
+            <Link to="/signup" className="text-text-muted text-sm hover:text-body-text transition-colors italic">
               Don&apos;t have an account? Create one free &rarr;
             </Link>
           </div>

@@ -52,3 +52,16 @@
   - Light mode grays 600–900 lighten from dark slate to near-white
   - Added CSS overrides for 4 arbitrary `bg-[#...]` classes used in forms and landing page
 - **Zero changes** to any of the 13 component files — all `bg-gray-*`, `border-gray-*`, `text-gray-*`, `text-white`, `bg-white/*`, `bg-black/*`, `border-white/*` classes now respond to theme toggle
+
+### Fixed hardcoded text colors breaking day/night mode
+- Replaced all `text-white` (always white) → `text-body-text` (adapts to theme):
+  - Landing page buttons, footer links, demo card buttons
+  - Auth form inputs (Login, Signup, ForgotPassword)
+  - Leaderboard score values, Contest register buttons
+  - Navbar avatar initial, Sidebar badge count
+  - Dashboard activity heatmap tooltips
+  - Platforms page tooltips and rating text
+- Replaced all `text-black` (always black) → `text-body-text` (adapts to theme):
+  - All `bg-accent-cyan` buttons (Get Started, Sign In, Set Reminder, Connect, Save, etc.)
+  - Sidebar badge count
+- Replaced `text-emerald-400`, `text-gray-200` → `text-accent-green`, `text-body-text` for theme-consistent coloring on leaderboard/contests

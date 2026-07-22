@@ -63,7 +63,7 @@ export default function Signup() {
             {platforms.map((p) => (
               <div
                 key={p.name}
-                className="flex items-center gap-2 bg-white/5 border border-gray-800 px-3 py-1.5 rounded text-sm font-mono text-gray-300"
+                className="flex items-center gap-2 bg-white/5 border border-gray-800 px-3 py-1.5 rounded text-sm font-mono text-text-muted"
               >
                 <div className={`w-2 h-2 rounded-full ${p.color}`} />
                 {p.name}
@@ -71,7 +71,7 @@ export default function Signup() {
             ))}
           </div>
           <div className="bg-card-bg/60 border border-gray-800 rounded-xl p-6 shadow-lg max-w-lg relative backdrop-blur-sm">
-            <p className="text-gray-300 mb-6 italic leading-relaxed text-sm lg:text-base">
+            <p className="text-text-muted mb-6 italic leading-relaxed text-sm lg:text-base">
               &ldquo;CodeFolio helped me to maintain consistency and to reach from 1100 to 1800 rating in just 2 months.&rdquo;
             </p>
             <div className="flex items-center gap-4">
@@ -109,7 +109,7 @@ export default function Signup() {
           )}
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-gray-300 mb-2">Display Name</label>
+              <label className="block text-sm font-medium text-text-muted mb-2">Display Name</label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-500">
                   <User className="w-4 h-4" />
@@ -118,13 +118,13 @@ export default function Signup() {
                   name="displayName"
                   value={form.displayName}
                   onChange={handleChange}
-                  className="w-full bg-[#111624] border border-gray-800 rounded-lg py-2.5 pl-10 pr-3 text-sm text-white focus:outline-none focus:border-accent-cyan focus:ring-1 focus:ring-accent-cyan transition-colors"
+                  className="w-full bg-[#111624] border border-gray-800 rounded-lg py-2.5 pl-10 pr-3 text-sm text-body-text focus:outline-none focus:border-accent-cyan focus:ring-1 focus:ring-accent-cyan transition-colors"
                   placeholder="Your name"
                 />
               </div>
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-300 mb-2">CodeFolio ID</label>
+              <label className="block text-sm font-medium text-text-muted mb-2">CodeFolio ID</label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-500">
                   <span className="text-sm">@</span>
@@ -133,13 +133,13 @@ export default function Signup() {
                   name="codefolioId"
                   value={form.codefolioId}
                   onChange={handleChange}
-                  className="w-full bg-[#111624] border border-gray-800 rounded-lg py-2.5 pl-10 pr-3 text-sm text-white focus:outline-none focus:border-accent-cyan focus:ring-1 focus:ring-accent-cyan transition-colors"
+                  className="w-full bg-[#111624] border border-gray-800 rounded-lg py-2.5 pl-10 pr-3 text-sm text-body-text focus:outline-none focus:border-accent-cyan focus:ring-1 focus:ring-accent-cyan transition-colors"
                   placeholder="your-username"
                 />
               </div>
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-300 mb-2">Email address</label>
+              <label className="block text-sm font-medium text-text-muted mb-2">Email address</label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-500">
                   <Mail className="w-4 h-4" />
@@ -149,14 +149,14 @@ export default function Signup() {
                   type="email"
                   value={form.email}
                   onChange={handleChange}
-                  className="w-full bg-[#111624] border border-gray-800 rounded-lg py-2.5 pl-10 pr-3 text-sm text-white focus:outline-none focus:border-accent-cyan focus:ring-1 focus:ring-accent-cyan transition-colors"
+                  className="w-full bg-[#111624] border border-gray-800 rounded-lg py-2.5 pl-10 pr-3 text-sm text-body-text focus:outline-none focus:border-accent-cyan focus:ring-1 focus:ring-accent-cyan transition-colors"
                   placeholder="you@example.com"
                   required
                 />
               </div>
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-300 mb-2">Password</label>
+              <label className="block text-sm font-medium text-text-muted mb-2">Password</label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-500">
                   <Lock className="w-4 h-4" />
@@ -166,21 +166,21 @@ export default function Signup() {
                   type={showPassword ? "text" : "password"}
                   value={form.password}
                   onChange={handleChange}
-                  className="w-full bg-[#111624] border border-gray-800 rounded-lg py-2.5 pl-10 pr-10 text-sm text-white focus:outline-none focus:border-accent-cyan focus:ring-1 focus:ring-accent-cyan transition-colors"
+                  className="w-full bg-[#111624] border border-gray-800 rounded-lg py-2.5 pl-10 pr-10 text-sm text-body-text focus:outline-none focus:border-accent-cyan focus:ring-1 focus:ring-accent-cyan transition-colors"
                   placeholder="Min 6 characters"
                   required
                 />
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-500 hover:text-gray-300"
+                  className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-500 hover:text-text-muted"
                 >
                   {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
                 </button>
               </div>
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-300 mb-2">Confirm Password</label>
+              <label className="block text-sm font-medium text-text-muted mb-2">Confirm Password</label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-500">
                   <Lock className="w-4 h-4" />
@@ -190,7 +190,7 @@ export default function Signup() {
                   type="password"
                   value={form.confirmPassword}
                   onChange={handleChange}
-                  className="w-full bg-[#111624] border border-gray-800 rounded-lg py-2.5 pl-10 pr-3 text-sm text-white focus:outline-none focus:border-accent-cyan focus:ring-1 focus:ring-accent-cyan transition-colors"
+                  className="w-full bg-[#111624] border border-gray-800 rounded-lg py-2.5 pl-10 pr-3 text-sm text-body-text focus:outline-none focus:border-accent-cyan focus:ring-1 focus:ring-accent-cyan transition-colors"
                   placeholder="Repeat password"
                   required
                 />
@@ -198,14 +198,14 @@ export default function Signup() {
             </div>
             <button
               type="submit"
-              className="w-full bg-accent-cyan hover:bg-cyan-400 text-black font-bold text-sm py-3 rounded-lg flex items-center justify-center gap-2 mt-2 transition-transform hover:-translate-y-0.5"
+              className="w-full bg-accent-cyan hover:bg-cyan-400 text-body-text font-bold text-sm py-3 rounded-lg flex items-center justify-center gap-2 mt-2 transition-transform hover:-translate-y-0.5"
             >
               Create Account
               <ArrowRight className="w-4 h-4" />
             </button>
           </form>
           <div className="mt-8 text-center">
-            <Link to="/login" className="text-text-muted text-sm hover:text-white transition-colors italic">
+            <Link to="/login" className="text-text-muted text-sm hover:text-body-text transition-colors italic">
               Already have an account? Sign in &rarr;
             </Link>
           </div>

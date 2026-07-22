@@ -64,7 +64,7 @@ function MiniHeatmap({ data, year }) {
                 className="group relative"
               >
                 <div className={`w-2 h-2 rounded-sm ${colors[level]}`} />
-                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-1 hidden group-hover:block bg-gray-900 text-white text-[10px] px-2 py-1 rounded whitespace-nowrap z-10 shadow-lg">
+                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-1 hidden group-hover:block bg-gray-900 text-body-text text-[10px] px-2 py-1 rounded whitespace-nowrap z-10 shadow-lg">
                   {count} on {key}
                 </div>
               </div>
@@ -152,7 +152,7 @@ export default function PlatformsPage() {
               className={`px-4 py-1.5 rounded-lg text-sm font-medium flex items-center gap-2 transition-colors ${
                 isActive
                   ? "bg-accent-cyan text-app-bg font-semibold"
-                  : "bg-card-bg border border-gray-800 text-text-muted hover:text-white"
+                  : "bg-card-bg border border-gray-800 text-text-muted hover:text-body-text"
               }`}
             >
               <div className={`w-2 h-2 rounded-sm ${PLATFORM_COLORS[p.platform] || "bg-gray-400"}`} />
@@ -188,7 +188,7 @@ export default function PlatformsPage() {
               <h3 className="text-sm font-bold mb-4">Contest Ratings</h3>
               <div className="text-accent-green font-bold text-3xl">
                 {data.rating > 0 ? (
-                  <>Pupil <span className="text-white">{data.rating}</span></>
+                  <>Pupil <span className="text-body-text">{data.rating}</span></>
                 ) : (
                   <span className="text-text-muted text-lg">Not available</span>
                 )}

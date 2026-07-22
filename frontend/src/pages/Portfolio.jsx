@@ -109,7 +109,7 @@ export default function Portfolio() {
   const isOwn = authUser?._id === user._id;
 
   return (
-    <div className="min-h-screen bg-app-bg text-white p-6 lg:p-10 max-w-6xl mx-auto">
+    <div className="min-h-screen bg-app-bg p-6 lg:p-10 max-w-6xl mx-auto">
       <header className="flex justify-between items-center mb-12">
         <Link to="/" className="flex items-center gap-2 font-bold text-lg tracking-wider">
           <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center text-sm shadow-[0_0_10px_rgba(19,212,241,0.3)]">
@@ -182,7 +182,7 @@ export default function Portfolio() {
           {copied ? <Check className="w-4 h-4" /> : <Share2 className="w-4 h-4" />}
           {copied ? "Copied!" : "Share Portfolio"}
         </button>
-        <button className="flex items-center gap-2 bg-gray-800 text-gray-300 px-4 py-2 rounded-lg text-sm font-bold border border-gray-700 hover:bg-gray-700 transition">
+        <button className="flex items-center gap-2 bg-gray-800 text-text-muted px-4 py-2 rounded-lg text-sm font-bold border border-gray-700 hover:bg-gray-700 transition">
           <FileText className="w-4 h-4" /> Export PDF
         </button>
       </div>

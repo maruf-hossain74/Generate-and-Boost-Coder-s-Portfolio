@@ -29,7 +29,7 @@ export default function Sidebar() {
     `flex items-center gap-3 px-3 py-2 rounded-lg text-sm transition-colors ${
       isActive
         ? "bg-accent-cyan/10 text-accent-cyan border border-accent-cyan/20"
-        : "text-text-muted hover:text-white hover:bg-white/5"
+        : "text-text-muted hover:text-body-text hover:bg-white/5"
     }`;
 
   const sidebar = (
@@ -48,7 +48,7 @@ export default function Sidebar() {
             <item.icon className="w-5 h-5 shrink-0" />
             <span>{item.label}</span>
             {item.badge && (
-              <span className="ml-auto bg-accent-cyan text-black text-[10px] px-1.5 rounded-full font-bold">
+              <span className="ml-auto bg-accent-cyan text-body-text text-[10px] px-1.5 rounded-full font-bold">
                 3
               </span>
             )}
