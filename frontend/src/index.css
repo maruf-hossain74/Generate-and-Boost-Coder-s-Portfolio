@@ -1,6 +1,35 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-body-text: var(--color-body-text);
+  --color-body-bg: var(--color-body-bg);
+  --color-app-bg: var(--color-app-bg);
+  --color-primary-dark: var(--color-primary-dark);
+  --color-sidebar-bg: var(--color-sidebar-bg);
+  --color-panel-bg: var(--color-panel-bg);
+  --color-card-bg: var(--color-card-bg);
+  --color-input-bg: var(--color-input-bg);
+  --color-border-dim: var(--color-border-dim);
+  --color-border-strong: var(--color-border-strong);
+  --color-text-muted: var(--color-text-muted);
+  --color-accent-cyan: var(--color-accent-cyan);
+  --color-accent-green: var(--color-accent-green);
+  --color-accent-orange: var(--color-accent-orange);
+  --color-accent-purple: var(--color-accent-purple);
+  --color-gold: var(--color-gold);
+  --color-silver: var(--color-silver);
+  --color-bronze: var(--color-bronze);
+  --color-gray-200: rgb(var(--gray-200));
+  --color-gray-300: rgb(var(--gray-300));
+  --color-gray-400: rgb(var(--gray-400));
+  --color-gray-500: rgb(var(--gray-500));
+  --color-gray-600: rgb(var(--gray-600));
+  --color-gray-700: rgb(var(--gray-700));
+  --color-gray-800: rgb(var(--gray-800));
+  --color-gray-900: rgb(var(--gray-900));
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
 
 :root {
   --color-app-bg: #090d14;
@@ -29,8 +58,6 @@
   --gray-700: 51 65 85;
   --gray-800: 31 41 55;
   --gray-900: 17 24 39;
-  --white: 255 255 255;
-  --black: 0 0 0;
 }
 
 :root.light {
@@ -60,8 +87,6 @@
   --gray-700: 203 213 225;
   --gray-800: 241 245 249;
   --gray-900: 248 250 252;
-  --white: 255 255 255;
-  --black: 0 0 0;
 }
 
 :root.light .bg-\[\#111624\] { background-color: #f1f5f9; }
@@ -70,7 +95,7 @@
 :root.light .bg-\[rgba\(21\,27\,44\,0\.7\)\] { background-color: rgba(255,255,255,0.7); }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-sans);
   background-color: var(--color-body-bg);
   color: var(--color-body-text);
 }

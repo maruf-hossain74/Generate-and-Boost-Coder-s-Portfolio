@@ -130,19 +130,19 @@ export default function Landing() {
                 <div className="text-xs text-text-muted mt-1 uppercase">Problems Solved</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-orange-600 font-mono">2,085</div>
+                <div className="text-3xl font-bold text-accent-orange font-mono">2,085</div>
                 <div className="text-xs text-text-muted mt-1 uppercase">Max CF Rating</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-500 font-mono">228</div>
+                <div className="text-3xl font-bold text-accent-green font-mono">228</div>
                 <div className="text-xs text-text-muted mt-1 uppercase">Day Streak</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-red-600 font-mono">#516</div>
+                <div className="text-3xl font-bold text-accent-orange font-mono">#516</div>
                 <div className="text-xs text-text-muted mt-1 uppercase">Global Rank</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-500 font-mono">8</div>
+                <div className="text-3xl font-bold text-accent-cyan font-mono">8</div>
                 <div className="text-xs text-text-muted mt-1 uppercase">Platforms Connected</div>
               </div>
             </div>
@@ -165,7 +165,7 @@ export default function Landing() {
           </div>
 
           <div className="bg-card-bg p-8 rounded-xl border border-white/5 hover:border-white/20 transition-colors text-left group">
-            <div className="w-12 h-12 bg-white/5 rounded-lg flex items-center justify-center mb-6 text-purple-400 group-hover:bg-purple-500/10 transition-colors">
+            <div className="w-12 h-12 bg-white/5 rounded-lg flex items-center justify-center mb-6 text-accent-purple group-hover:bg-accent-purple/10 transition-colors">
               <BarChart2 />
             </div>
             <h4 className="text-xl font-bold mb-3">Deep Analytics</h4>
@@ -173,7 +173,7 @@ export default function Landing() {
           </div>
 
           <div className="bg-card-bg p-8 rounded-xl border border-white/5 hover:border-white/20 transition-colors text-left group">
-            <div className="w-12 h-12 bg-white/5 rounded-lg flex items-center justify-center mb-6 text-green-400 group-hover:bg-green-500/10 transition-colors">
+            <div className="w-12 h-12 bg-white/5 rounded-lg flex items-center justify-center mb-6 text-accent-green group-hover:bg-accent-green/10 transition-colors">
               <Bell />
             </div>
             <h4 className="text-xl font-bold mb-3">Contest Reminders</h4>

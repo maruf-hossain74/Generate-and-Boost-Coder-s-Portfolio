@@ -14,8 +14,8 @@ const FILTERS = [
 function getPodium(data) {
   const top3 = data.slice(0, 3);
   if (top3.length === 0) return null;
-  const second = top3[0] || null;
-  const first = top3[1] || null;
+  const first = top3[0] || null;
+  const second = top3[1] || null;
   const third = top3[2] || null;
   return { first, second, third };
 }
@@ -108,7 +108,7 @@ export default function LeaderboardPage() {
     <div>
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-6 mb-8">
         <div>
-          <h1 className="text-3xl font-bold mb-2">Global Leaderboard</h1>
+          <h1 className="text-3xl font-bold mb-2 ">Global Leaderboard</h1>
           <p className="text-sm text-text-muted italic">
             Compete across all platforms &middot; Updated every 15 minutes
           </p>

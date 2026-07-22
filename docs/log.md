@@ -65,3 +65,22 @@
   - All `bg-accent-cyan` buttons (Get Started, Sign In, Set Reminder, Connect, Save, etc.)
   - Sidebar badge count
 - Replaced `text-emerald-400`, `text-gray-200` → `text-accent-green`, `text-body-text` for theme-consistent coloring on leaderboard/contests
+
+### Fixed remaining non-adaptive gray text and hardcoded colors
+- Replaced `text-gray-400` (same in both themes) → `text-text-muted` (adapts):
+  - Dashboard metric card badge text, Contest unknown platform label
+- Replaced `text-gray-500` (same in both themes) → `text-text-muted` (adapts):
+  - Input icon placeholders in Login/Signup/ForgotPassword (14 instances)
+  - Login/Signup footer "Secured with" text
+- Replaced landing page demo stat colors `text-orange-600`/`text-green-500`/`text-red-600`/`text-blue-500` → `text-accent-orange`/`text-accent-green`/`text-accent-cyan` (theme-aware)
+- Replaced landing page feature card icon colors `text-purple-400`/`text-green-400` → `text-accent-purple`/`text-accent-green` (theme-aware)
+- Replaced Dashboard/Portfolio stat `text-red-400` → `text-accent-purple` for theme-consistent "Global Rank" coloring
+- Fixed `Dashboard.jsx` greeting heading using broken `theme` ternary (`theme === "dark" ? "text-white" : "text-black"`):
+  - `theme` was undefined in `Dashboard` scope (only declared inside `Heatmap` function)
+  - Replaced with `text-body-text` — no ternary needed, properly theme-aware
+  - Removed unused `useTheme` import and `useTheme()` call
+
+### Registered missing `body-text` Tailwind color in tailwind.config.js
+- Added `"body-text": "var(--color-body-text)"` to `tailwind.config.js` colors
+- **Root cause**: CSS variable `--color-body-text` existed in `index.css` but had no corresponding Tailwind utility class — all previous `text-body-text` fixes across the codebase produced zero CSS and silently did nothing
+- Now `text-body-text` properly resolves to `#ffffff` in dark mode and `#0f172a` in light mode

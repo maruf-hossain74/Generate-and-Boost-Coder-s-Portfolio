@@ -203,7 +203,7 @@ export default function Dashboard() {
     {
       label: "GLOBAL RANK",
       value: stats?.globalRank ? `#${stats.globalRank}` : "—",
-      color: "text-red-400",
+      color: "text-accent-purple",
       badge: stats?.globalRank ? "Globally ranked" : "",
     },
   ];
@@ -219,7 +219,7 @@ export default function Dashboard() {
   return (
     <div>
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
-        <h1 className="text-2xl font-bold">
+        <h1 className="text-2xl font-bold text-body-text">
           {greeting}, {user?.displayName || "Coder"}
         </h1>
         {portfolioUrl && (
@@ -243,7 +243,7 @@ export default function Dashboard() {
               {m.value}
             </p>
             {m.badge && (
-              <p className="text-gray-400 text-xs mt-1">{m.badge}</p>
+              <p className="text-text-muted text-xs mt-1">{m.badge}</p>
             )}
           </div>
         ))}

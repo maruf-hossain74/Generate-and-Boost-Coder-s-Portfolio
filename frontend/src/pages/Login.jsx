@@ -96,7 +96,7 @@ export default function Login() {
             <div>
               <label className="block text-sm font-medium text-text-muted mb-2">Email address</label>
               <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-500">
+                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-text-muted">
                   <Mail className="w-4 h-4" />
                 </div>
                 <input
@@ -117,7 +117,7 @@ export default function Login() {
                 </Link>
               </div>
               <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-500">
+                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-text-muted">
                   <Lock className="w-4 h-4" />
                 </div>
                 <input
@@ -131,7 +131,7 @@ export default function Login() {
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-500 hover:text-text-muted"
+                  className="absolute inset-y-0 right-0 pr-3 flex items-center text-text-muted hover:text-text-muted"
                 >
                   {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
                 </button>
@@ -150,7 +150,7 @@ export default function Login() {
               Don&apos;t have an account? Create one free &rarr;
             </Link>
           </div>
-          <div className="mt-8 pt-6 border-t border-gray-800 flex items-center justify-center gap-2 text-xs text-gray-500">
+          <div className="mt-8 pt-6 border-t border-gray-800 flex items-center justify-center gap-2 text-xs text-text-muted">
             <ShieldCheck className="w-3.5 h-3.5 text-green-500" />
             <span className="italic">Secured with 256-bit SSL encryption</span>
           </div>

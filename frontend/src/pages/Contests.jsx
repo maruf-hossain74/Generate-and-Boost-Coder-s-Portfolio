@@ -190,7 +190,7 @@ export default function ContestsPage() {
             const meta = PLATFORM_META[contest.platform] || {
               label: contest.platform,
               dot: "bg-gray-400",
-              text: "text-gray-400",
+              text: "text-text-muted",
             };
             const hasReminder = reminders.has(contest._id);
 

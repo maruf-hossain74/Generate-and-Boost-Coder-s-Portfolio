@@ -111,12 +111,6 @@ export default function Portfolio() {
   return (
     <div className="min-h-screen bg-app-bg p-6 lg:p-10 max-w-6xl mx-auto">
       <header className="flex justify-between items-center mb-12">
-        <Link to="/" className="flex items-center gap-2 font-bold text-lg tracking-wider">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center text-sm shadow-[0_0_10px_rgba(19,212,241,0.3)]">
-            CF
-          </div>
-          CODEFOLOI
-        </Link>
         <div className="space-x-4">
           {!authUser && (
             <Link to="/login" className="bg-gray-800 px-4 py-2 rounded-lg text-sm hover:bg-gray-700 transition">
@@ -170,7 +164,7 @@ export default function Portfolio() {
         <StatItem value={stats.totalSolved?.toLocaleString() || "0"} label="Problems Solved" color="text-accent-cyan" />
         <StatItem value={stats.maxCfRating?.toLocaleString() || "0"} label="Max CF Rating" color="text-accent-purple" />
         <StatItem value={stats.dayStreak?.toString() || "0"} label="Day Streak" color="text-accent-orange" />
-        <StatItem value={stats.globalRank ? `#${stats.globalRank.toLocaleString()}` : "—"} label="Global Rank" color="text-red-400" />
+        <StatItem value={stats.globalRank ? `#${stats.globalRank.toLocaleString()}` : "—"} label="Global Rank" color="text-accent-purple" />
         <StatItem value={stats.platformsConnected?.toString() || "0"} label="Platforms" color="text-accent-green" />
       </div>
 

@@ -30,8 +30,12 @@ export default function Navbar() {
               onClick={() => navigate("/dashboard")}
               className="flex items-center gap-2 p-1.5 rounded-lg hover:bg-white/5 transition-colors"
             >
-              <div className="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center text-xs font-bold text-body-text shrink-0">
-                {user.displayName?.charAt(0)?.toUpperCase() || "U"}
+              <div className="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center text-xs font-bold text-body-text shrink-0 overflow-hidden">
+                {user.avatar ? (
+                  <img src={user.avatar} alt="" className="w-full h-full object-cover" />
+                ) : (
+                  user.displayName?.charAt(0)?.toUpperCase() || "U"
+                )}
               </div>
               <div className="min-w-0 hidden sm:block text-left">
                 <p className="text-sm font-bold leading-tight truncate max-w-[120px]">
