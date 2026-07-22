@@ -2,8 +2,75 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-app-bg: #090d14;
+  --color-primary-dark: #0a0f1a;
+  --color-sidebar-bg: #0c121e;
+  --color-panel-bg: #121927;
+  --color-card-bg: #1a2235;
+  --color-input-bg: #1a1a1a;
+  --color-border-dim: rgba(255, 255, 255, 0.05);
+  --color-border-strong: rgba(255, 255, 255, 0.1);
+  --color-text-muted: #8f9bb3;
+  --color-accent-cyan: #13d4f1;
+  --color-accent-green: #10b981;
+  --color-accent-orange: #f97316;
+  --color-accent-purple: #a855f7;
+  --color-gold: #f59e0b;
+  --color-silver: #cbd5e1;
+  --color-bronze: #d97706;
+  --color-body-text: #ffffff;
+  --color-body-bg: #090d14;
+  --gray-200: 226 232 240;
+  --gray-300: 203 213 225;
+  --gray-400: 148 163 184;
+  --gray-500: 100 116 139;
+  --gray-600: 71 85 105;
+  --gray-700: 51 65 85;
+  --gray-800: 31 41 55;
+  --gray-900: 17 24 39;
+  --white: 255 255 255;
+  --black: 0 0 0;
+}
+
+:root.light {
+  --color-app-bg: #f8fafc;
+  --color-primary-dark: #f1f5f9;
+  --color-sidebar-bg: #ffffff;
+  --color-panel-bg: #ffffff;
+  --color-card-bg: #f8fafc;
+  --color-input-bg: #e2e8f0;
+  --color-border-dim: rgba(0, 0, 0, 0.06);
+  --color-border-strong: rgba(0, 0, 0, 0.12);
+  --color-text-muted: #64748b;
+  --color-accent-cyan: #0ea5e9;
+  --color-accent-green: #059669;
+  --color-accent-orange: #ea580c;
+  --color-accent-purple: #9333ea;
+  --color-gold: #ca8a04;
+  --color-silver: #64748b;
+  --color-bronze: #b45309;
+  --color-body-text: #0f172a;
+  --color-body-bg: #f8fafc;
+  --gray-200: 226 232 240;
+  --gray-300: 203 213 225;
+  --gray-400: 148 163 184;
+  --gray-500: 100 116 139;
+  --gray-600: 148 163 184;
+  --gray-700: 203 213 225;
+  --gray-800: 241 245 249;
+  --gray-900: 248 250 252;
+  --white: 255 255 255;
+  --black: 0 0 0;
+}
+
+:root.light .bg-\[\#111624\] { background-color: #f1f5f9; }
+:root.light .bg-\[\#0a0f1a\] { background-color: #f1f5f9; }
+:root.light .bg-\[\#0c1626\] { background-color: #f8fafc; }
+:root.light .bg-\[rgba\(21\,27\,44\,0\.7\)\] { background-color: rgba(255,255,255,0.7); }
+
 body {
   font-family: "Inter", sans-serif;
-  background-color: #090d14;
-  color: #ffffff;
+  background-color: var(--color-body-bg);
+  color: var(--color-body-text);
 }

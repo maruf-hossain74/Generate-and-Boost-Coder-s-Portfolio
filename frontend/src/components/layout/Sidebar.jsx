@@ -9,8 +9,8 @@ import {
   Menu,
   X,
 } from "lucide-react";
-import { useAuth } from "../../context/AuthContext";
 import { useState } from "react";
+import Logo from "../Logo";
 
 const navItems = [
   { to: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
@@ -22,7 +22,6 @@ const navItems = [
 ];
 
 export default function Sidebar() {
-  const { user } = useAuth();
   const location = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -34,48 +33,28 @@ export default function Sidebar() {
     }`;
 
   const sidebar = (
-    <div className="h-full bg-sidebar-bg border-r border-gray-800 flex flex-col justify-between p-6">
-      <div>
-        <div className="flex items-center gap-2 mb-10 font-bold text-lg tracking-wider">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center text-sm shadow-[0_0_10px_rgba(19,212,241,0.3)]">
-            CF
-          </div>
-          CODEFOLOI
-        </div>
-        <nav className="space-y-1">
-          {navItems.map((item) => (
-            <NavLink
-              key={item.to}
-              to={item.to}
-              className={linkClass}
-              onClick={() => setMobileOpen(false)}
-            >
-              <item.icon className="w-5 h-5 shrink-0" />
-              <span>{item.label}</span>
-              {item.badge && (
-                <span className="ml-auto bg-accent-cyan text-black text-[10px] px-1.5 rounded-full font-bold">
-                  3
-                </span>
-              )}
-            </NavLink>
-          ))}
-        </nav>
+    <div className="h-full bg-sidebar-bg border-r border-gray-800 flex flex-col p-6">
+      <div className="mb-10">
+        <Logo className="h-8 w-auto" />
       </div>
-      {user && (
-        <div className="bg-gray-900/50 p-3 rounded-lg flex items-center gap-3">
-          <div className="w-10 h-10 bg-gray-600 rounded-full flex items-center justify-center text-xs font-bold text-white shrink-0">
-            {user.displayName?.charAt(0)?.toUpperCase() || "U"}
-          </div>
-          <div className="min-w-0">
-            <p className="text-sm font-bold truncate">
-              {user.displayName || "User"}
-            </p>
-            <p className="text-xs text-accent-cyan truncate">
-              @{user.codefolioId || user.email?.split("@")[0]}
-            </p>
-          </div>
-        </div>
-      )}
+      <nav className="space-y-1">
+        {navItems.map((item) => (
+          <NavLink
+            key={item.to}
+            to={item.to}
+            className={linkClass}
+            onClick={() => setMobileOpen(false)}
+          >
+            <item.icon className="w-5 h-5 shrink-0" />
+            <span>{item.label}</span>
+            {item.badge && (
+              <span className="ml-auto bg-accent-cyan text-black text-[10px] px-1.5 rounded-full font-bold">
+                3
+              </span>
+            )}
+          </NavLink>
+        ))}
+      </nav>
     </div>
   );
 

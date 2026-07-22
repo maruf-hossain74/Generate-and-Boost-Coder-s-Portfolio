@@ -1,5 +1,10 @@
 import { Link } from "react-router-dom";
 import { Zap, PlayCircle, Share2, Download, Layers, BarChart2, Bell, Star, Rocket } from "lucide-react";
+import Logo from "../components/Logo";
+import banner from "../../resources/images/Codeforlio-Banner.png"
+import supervisorImage from "../../resources/images/Dr_AHM_kamal.jpg";
+import developerImage from "../../resources/images/maruf_hossain.png";
+import demoUserImage from "../../resources/images/saikat.png"
 
 export default function Landing() {
   return (
@@ -7,15 +12,7 @@ export default function Landing() {
       <nav className="fixed w-full top-0 z-50 bg-[rgba(21,27,44,0.7)] backdrop-blur-[10px] border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-20 items-center">
-            <div className="flex-shrink-0 flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-accent-cyan to-blue-600 flex items-center justify-center font-bold text-xl">
-                CF
-              </div>
-              <div>
-                <span className="font-bold text-xl tracking-wide">CODEFOLIO</span>
-                <p className="text-[10px] text-text-muted uppercase tracking-widest -mt-1">Build Your Digital Portfolio</p>
-              </div>
-            </div>
+            <Logo className="h-10 w-auto" />
             <div className="hidden md:flex space-x-8">
               <a href="#features" className="text-gray-300 hover:text-accent-cyan px-3 py-2 text-sm font-medium transition-colors">Features</a>
               <Link to="/leaderboard" className="text-gray-300 hover:text-accent-cyan px-3 py-2 text-sm font-medium transition-colors">Leaderboard</Link>
@@ -32,8 +29,10 @@ export default function Landing() {
 
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden min-h-screen flex items-center justify-center">
         <div
-          className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-30"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop')" }}
+          className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat bg-fixed opacity-50"
+          style={{
+            backgroundImage: `url(${banner})`,
+          }}
         />
         <div className="absolute inset-0 z-0" style={{ background: "linear-gradient(to bottom, rgba(10, 15, 26, 0.8) 0%, rgba(10, 15, 26, 1) 100%)" }} />
         <div className="absolute inset-0 z-0" style={{ background: "radial-gradient(circle at center, rgba(0, 210, 255, 0.15) 0%, rgba(10, 15, 26, 0) 70%)" }} />
@@ -92,16 +91,20 @@ export default function Landing() {
           <div className="p-8 md:p-12">
             <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
               <div className="relative">
-                <div className="w-32 h-32 rounded-full border-4 border-card-bg shadow-xl z-10 relative bg-gray-700 flex items-center justify-center text-4xl font-bold">
-                  MH
+                <div className="w-16 h-16 rounded-full border-2 border-white/20 overflow-hidden shrink-0">
+                  <img
+                    src={demoUserImage}
+                    alt="Maruf_Hossain"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div className="absolute inset-0 rounded-full border-4 border-accent-cyan animate-pulse" />
               </div>
 
               <div className="text-center md:text-left flex-1">
-                <h2 className="text-3xl font-bold mb-2">Maruf Hossain</h2>
+                <h2 className="text-3xl font-bold mb-2">Muhammad SaiKat</h2>
                 <div className="text-text-muted text-sm mb-4 font-mono">
-                  @maruf_codes &bull; Full Stack Developer &bull; Competitive Programmer
+                  @Saikat_codes &bull; Full Stack Developer &bull; Competitive Programmer &bull; Candidate Master @Codeforces 
                 </div>
 
                 <div className="flex flex-wrap justify-center md:justify-start gap-2 mb-6">
@@ -127,19 +130,19 @@ export default function Landing() {
                 <div className="text-xs text-text-muted mt-1 uppercase">Problems Solved</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 font-mono">1,409</div>
+                <div className="text-3xl font-bold text-orange-600 font-mono">2,085</div>
                 <div className="text-xs text-text-muted mt-1 uppercase">Max CF Rating</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-500 font-mono">228</div>
+                <div className="text-3xl font-bold text-green-500 font-mono">228</div>
                 <div className="text-xs text-text-muted mt-1 uppercase">Day Streak</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-red-500 font-mono">#5,016</div>
+                <div className="text-3xl font-bold text-red-600 font-mono">#516</div>
                 <div className="text-xs text-text-muted mt-1 uppercase">Global Rank</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-500 font-mono">8</div>
+                <div className="text-3xl font-bold text-blue-500 font-mono">8</div>
                 <div className="text-xs text-text-muted mt-1 uppercase">Platforms Connected</div>
               </div>
             </div>
@@ -235,10 +238,7 @@ export default function Landing() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
             <div className="col-span-1 md:col-span-2">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-8 h-8 rounded shrink-0 bg-gradient-to-br from-accent-cyan to-blue-600 flex items-center justify-center font-bold text-sm">CF</div>
-                <span className="font-bold text-xl tracking-wide">CODEFOLIO</span>
-              </div>
+              <Logo className="h-8 w-auto mb-4" />
               <p className="text-text-muted text-sm max-w-xs italic">The definitive coding portfolio platform for developers who mean business.</p>
             </div>
 
@@ -268,8 +268,12 @@ export default function Landing() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="flex items-start gap-4">
-                <div className="w-16 h-16 rounded-full border-2 border-white/20 bg-gray-700 flex items-center justify-center text-lg font-bold shrink-0">
-                  DK
+                <div className="w-16 h-16 rounded-full border-2 border-white/20 overflow-hidden shrink-0">
+                  <img
+                    src={supervisorImage}
+                    alt="Dr. AHM Kamal"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div>
                   <div className="text-sm text-text-muted mb-1">Supervised By:</div>
@@ -277,6 +281,7 @@ export default function Landing() {
                   <div className="text-sm text-text-muted text-xs leading-relaxed">
                     Professor<br />
                     Computer Science and Engineering<br />
+                    Jatiya Kabi Kazi Nazrul Islam University<br />
                     kamal@jkkniu.edu.bd<br />
                     +8801732226402
                   </div>
@@ -284,8 +289,12 @@ export default function Landing() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-16 h-16 rounded-full border-2 border-accent-cyan bg-gray-700 flex items-center justify-center text-lg font-bold shrink-0">
-                  MH
+                <div className="w-16 h-16 rounded-full border-2 border-white/20 overflow-hidden shrink-0">
+                  <img
+                    src={developerImage}
+                    alt="MD. Maruf hossain"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div>
                   <div className="text-sm text-text-muted mb-1">Developed By:</div>
@@ -293,6 +302,7 @@ export default function Landing() {
                   <div className="text-sm text-text-muted text-xs leading-relaxed">
                     Session: 2021-2022<br />
                     Department of Computer Science and Engineering<br />
+                    Jatiya Kabi Kazi Nazrul Islam University<br />
                     marufhussain745@gmail.com<br />
                     +8801831710007
                   </div>

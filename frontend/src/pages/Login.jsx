@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { Mail, Lock, Eye, EyeOff, ShieldCheck, Github, ArrowRight } from "lucide-react";
 import { useAuth } from "../context/AuthContext";
+import Logo from "../components/Logo";
 
 const platforms = [
   { name: "LeetCode", color: "bg-orange-400" },
@@ -34,14 +35,8 @@ export default function Login() {
     <div className="min-h-screen flex flex-col lg:flex-row">
       <div className="lg:w-1/2 bg-panel-bg flex flex-col justify-center p-8 lg:p-24 relative overflow-hidden border-r border-gray-800">
         <div className="max-w-xl mx-auto w-full z-10 relative">
-          <div className="flex items-center gap-3 mb-16">
-            <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center font-bold text-2xl shadow-[0_0_15px_rgba(19,212,241,0.3)]">
-              CF
-            </div>
-            <div>
-              <span className="font-bold text-2xl tracking-wide">CODEFOLIO</span>
-              <p className="text-[10px] text-text-muted uppercase tracking-widest leading-none mt-1">Build Your Digital Portfolio</p>
-            </div>
+          <div className="mb-16">
+            <Logo className="h-12 w-auto" />
           </div>
           <h1 className="text-4xl lg:text-5xl font-bold leading-[1.15] tracking-tight mb-6">
             Your entire coding<br />journey, unified.
